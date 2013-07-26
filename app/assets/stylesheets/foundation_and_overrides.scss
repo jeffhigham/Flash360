@@ -51,7 +51,7 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-$body-bg: #222;
+$body-bg: #fff;
 // $body-font-color: #000;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -1339,3 +1339,5 @@ $primary-color: #3e94d1;
   "foundation/components/thumbs",
   "foundation/components/tooltips",
   "foundation/components/dropdown";
+
+@import 'foundation-icons';

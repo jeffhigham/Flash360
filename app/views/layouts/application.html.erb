@@ -21,28 +21,43 @@
   </head>
   <body>
 
-
-  <!-- Header and Nav -->  
-  <div class="row">
-    <div class="large-3 columns">
-      <h1><span style="color:#3e94d1; font-family:'Myriad Pro','Helvetica Neue',Helvetica,Arial,Sans-Serif;">FLASH</span><span style="color:#fff">360</span></h1>
-    </div>
-    <div class="large-9 columns">
-      <!--
-      <ul class="right button-group">
-      <li><a href="#" class="radius button">Learn More</a></li>
-      <li><a href="#" class="radius button">References</a></li>
-      <li><a href="#" class="radius button">Contact</a></li>
-      </ul> -->
-  </div>
-  </div>
+<!-- Navigation -->
+  <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="<%= home_index_path %>">
+            <h1><span style="color:#3e94d1; font-family:'Myriad Pro','Helvetica Neue',Helvetica,Arial,Sans-Serif; ">FLASH</span><span style="color:#fff">360</span></h1>
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li><a href="<%= resume_index_path %>">Experience</a></li>
+        <li class="divider"></li>
+        <li><a href="#" data-reveal-id="contactModal">Contact</a></li>
+      </ul>
+    </section>
+  </nav>
   
   <!-- End Header and Nav -->
 
   <%= yield %>
 
   <!-- Footer -->
-      
+
+  <%= render :template => "footer/show" %>
+  
+  <!-- modal -->
+  <div id="contactModal" class="reveal-modal">
+  <%= render :template => "contact/index" %>
+  <a class="close-reveal-modal"><i class="general foundicon-remove"></i></a>
+</div>
   <%= javascript_include_tag "application" %>
   </body>
 </html>

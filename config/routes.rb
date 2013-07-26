@@ -7,9 +7,8 @@ Flash360::Application.routes.draw do
 
     resources :home
     resources :contact
-    resources :references
-    resources :service
-    resources :experience
+    resources :about
+    resources :resume
     root :to => "home#index"
 
   # The priority is based upon order of creation:
