@@ -15,3 +15,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore gmail config
+/config/gmail.yml
+
+#Ignore apple special files
+*.DS_Store
