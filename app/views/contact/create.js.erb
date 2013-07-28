@@ -1,0 +1,3 @@
+$('#contactModal').foundation('reveal', 'close');
+$('#flash').html('<%= escape_javascript( render :partial => "contact/email_successful").html_safe %>');
+$('#contactModal').html('<%= escape_javascript(render :template => "contact/index") %>');

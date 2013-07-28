@@ -1,12 +1,11 @@
- <br/>
  <section class="section">
-    <form>
+  <%= form_tag contact_index_path, remote: true do %>
       <div class="row collapse">
         <div class="large-2 columns">
           <label class="inline">Your Name</label>
         </div>
         <div class="large-10 columns">
-          <input type="text" id="yourName" placeholder="Jane Smith">
+          <input type="text" id="contact_name" name="mail_form[name]" placeholder="Jane Smith">
         </div>
       </div>
       <div class="row collapse">
@@ -14,12 +13,12 @@
           <label class="inline"> Your Email</label>
         </div>
         <div class="large-10 columns">
-          <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+          <input type="text" id="contact_email" name="mail_form[email]" placeholder="jane@smithco.com">
         </div>
       </div>
       <label>What can I help you with?</label>
-      <textarea rows="4"></textarea>
+      <textarea rows="4" id="contact_body" name="mail_form[body]"></textarea>
       <button type="submit" class="radius button">Submit</button>
-    </form>
+    <% end %>
 </section>
-         
+<a class="close-reveal-modal"><i class="general foundicon-remove"></i></a>         

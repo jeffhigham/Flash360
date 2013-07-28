@@ -46,7 +46,9 @@
   </nav>
   
   <!-- End Header and Nav -->
-
+  <div class="row">
+    <div class="12-large columns" id="flash"></div>
+  </div>
   <%= yield %>
 
   <!-- Footer -->
@@ -56,8 +58,7 @@
   <!-- modal -->
   <div id="contactModal" class="reveal-modal">
   <%= render :template => "contact/index" %>
-  <a class="close-reveal-modal"><i class="general foundicon-remove"></i></a>
-</div>
+  </div>
   <%= javascript_include_tag "application" %>
   </body>
 </html>
