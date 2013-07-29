@@ -12,3 +12,25 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+
+ .image_rounded_shadow {
+        margin: 5px 5px 5px 5px;
+        padding: 10px 10px 10px 10px;
+        border: solid 1px #BDBED9;
+        background-color:#F5F5F8; 
+        box-shadow: 1px 1px 6px #888888;
+        -webkit-box-shadow: 1px 1px 6px #888888;
+        -moz-box-shadow: 1px 1px 6px #888888;
+        border-radius:10px;
+        -moz-border-radius:10px;
+        -webkit-border-radius:10px;
+    } 
+
+.image_rounded {
+    padding: 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;  
+    border-radius: 8px;
+    overflow: hidden;
+}

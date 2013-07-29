@@ -1,17 +1,11 @@
 <%
-experience = [ 
-'Linux',
-'Solaris',
-'MySQL',
-'Systems Architecture',
-'Cloud Computing',
-'Virtualization',
+software_experience = [ 
 'Ruby',
 'PHP',
 'Perl',
 'C++',
-'Shell',
 'JQuery',
+'NodeJS',
 'CoffeeScript',
 'CSS',
 'SCSS',
@@ -21,10 +15,38 @@ experience = [
 'Git',
 'Mercurial',
 'Photoshop',
-'Illustrator'
+'Illustrator',
+'Heroku',
+'Foundation 4',
+'Twitter Bootstrap',
+]
+
+systems_experience = [ 
+'Linux',
+'Solaris',
+'MySQL',
+'Apache',
+'Ngix',
+'Systems Architecture',
+'Virtualization',
+'Shell Scripting',
+'DTrace',
+'High Availability',
+'Clustering',
+'MemCached',
+'Cloud Computing',
+'Amazon Web Services (AWS)',
+'Linode',
+'NFS / FC / iSCSI'
 ]
 %>
-<% experience.each do |e| %>
+<h4 class="subheader">Software</h4>
+<% software_experience.each do |e| %>
+<span class="radius secondary label"><%= e %></span>
+<% end %>
+<p/>
+<h4 class="subheader">Systems</h4>
+<% systems_experience.each do |e| %>
 <span class="radius secondary label"><%= e %></span>
 <% end %>
 <p/>
