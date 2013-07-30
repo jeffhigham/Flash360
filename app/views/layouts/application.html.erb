@@ -46,9 +46,14 @@
   </nav>
   
   <!-- End Header and Nav -->
+
+  <!-- Flash Notifications -->
   <div class="row">
     <div class="12-large columns" id="flash"></div>
   </div>
+
+  <!-- Content -->
+
   <%= yield %>
 
   <!-- Footer -->
@@ -57,7 +62,7 @@
   
   <!-- modal -->
   <div id="contactModal" class="reveal-modal">
-  <%= render :template => "contact/index" %>
+  <%= render :partial => "contacts/form" %>
   </div>
   <%= javascript_include_tag "application" %>
   </body>

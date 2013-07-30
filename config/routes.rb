@@ -6,7 +6,7 @@ Flash360::Application.routes.draw do
   #get "experience/index"
 
     resources :home
-    resources :contact
+    resources :contacts
     resources :about
     resources :resume
     root :to => "home#index"

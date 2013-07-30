@@ -18,6 +18,8 @@
 
 # Ignore gmail config
 /config/gmail.yml
+/config/admin.yml
+/Readme.rdoc
 
 #Ignore apple special files
 *.DS_Store

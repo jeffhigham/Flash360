@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725231430) do
+ActiveRecord::Schema.define(:version => 20130730154140) do
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "remote_ip"
+    t.string   "user_agent"
+    t.string   "subject"
+  end
 
   create_table "resumes", :force => true do |t|
     t.string   "username"
@@ -19,5 +30,14 @@ ActiveRecord::Schema.define(:version => 20130725231430) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "simple_captcha_data", :force => true do |t|
+    t.string   "key",        :limit => 40
+    t.string   "value",      :limit => 6
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "simple_captcha_data", ["key"], :name => "idx_key"
 
 end

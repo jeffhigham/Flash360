@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="large-12 columns">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @contact.subject %>
+</p>
+
+<p>
+  <b>Message:</b><br/>
+  <%= @contact.message %>
+</p>
+
+
+<%= link_to '<i class="general foundicon-left-arrow"></i>'.html_safe, contacts_path, class: "small radius button" %>
+<%= link_to '<i class="general foundicon-mail"></i>'.html_safe, "mailto:#{@contact.email}?subject=Re:#{@contact.subject}", class: "small radius button" %>
+
+<%= link_to '<i class="general foundicon-checkmark"></i>'.html_safe, contacts_path, class: "small radius button" %>
+<%= link_to '<i class="general foundicon-trash"></i>'.html_safe, contacts_path, class: "small radius button" %>
+
+</div>
+</div>

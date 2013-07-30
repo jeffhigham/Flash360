@@ -1,0 +1,45 @@
+ <% @contact = Contact.new %>
+ <div class="row" >
+   <fieldset>
+    <legend>Contact</legend>
+    <%= form_for @contact, :html => { :remote => true, 'data-abide' => true } do |f| %>
+        <div class="row collapse">
+
+          <div class="large-2 columns">
+            <label class="inline">Your Name <small>required</small></label>
+          </div>
+          <div class="large-10 columns name_field">
+            <input type="text" id="contact_name" name="contact[name]" placeholder="First Last" required >
+            <small class="error">Name is required and must be at least one word.</small>
+          </div>
+        </div>
+
+        <div class="row collapse">
+          <div class="large-2 columns email_field">
+            <label class="inline"> Your Email <small>required</small></label>
+          </div>
+          <div class="large-10 columns">
+            <input type="email" id="contact_email" name="contact[email]" placeholder="you@yourwebsite.com" required>
+            <small class="error">A valid email address is required.</small>
+          </div>      
+        </div>
+
+        <div class="row collapse">
+          <div class="large-2 columns ">
+            <label class="inline"> Email Subject <small>required</small></label>
+          </div>
+          <div class="large-10 columns">
+            <input type="text" id="contact_subject" name="contact[subject]" placeholder="" required>
+            <small class="error">Email subject is required.</small>
+          </div>      
+        </div>
+        
+        <label>What can I help you with? <small>required</small></label>
+        <textarea rows="4" id="contact_message" name="contact[message]" required></textarea>
+        <small class="error">You forgot the message body.</small>
+        <button type="submit" class="radius button">Submit</button>
+      
+      <% end %>
+    </fieldset>
+    <a class="close-reveal-modal"><i class="general foundicon-remove"></i></a>
+</div>         
