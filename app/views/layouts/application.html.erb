@@ -40,7 +40,11 @@
         <li class="divider"></li>
         <li><a href="<%= resume_index_path %>">Experience</a></li>
         <li class="divider"></li>
-        <li><a href="#" data-reveal-id="contactModal">Contact</a></li>
+        <li><a href="#" data-reveal-id="contactModal">Contact</i> </a></li>
+        <% if current_user %>
+          <li class="divider"></li>
+          <li><a href="<%= contacts_path %>" style="color:#3e94d1"><i class="general foundicon-inbox"></i></a></li>
+        <% end %>
       </ul>
     </section>
   </nav>

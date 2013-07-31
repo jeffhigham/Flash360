@@ -5,11 +5,15 @@
       <hr />
       <div class="row">
         <div class="large-6 columns">
-          <p>&copy; Flash360 Consulting, LLC.</p>
+          <p style="color:#3e94d1;">&copy; Flash360 Consulting, LLC.</p>
         </div>
         <div class="large-6 columns">
             <ul class="inline-list right">
-            <li><a href="#" data-reveal-id="contactModal"><i class="general foundicon-mail"></i></a></li>
+            <% if current_user %>
+              <li><a href="<%= logout_path %>"><i class="general foundicon-lock"></i></a></li>
+            <% else %>
+              <li><a href="<%= login_path %>" style="color:#e9e9e9;"><i class="general foundicon-unlock"></i></a></li>
+            <% end %>
             <li><a href="http://www.github.com/jeffhigham"><i class="social foundicon-github"></i></a></li>
             <li><a href="http://www.facebook.com/flash360tech"><i class="social foundicon-facebook"></i></a></li>
             <li><a href="http://www.twitter.com/flash360tech"><i class="social foundicon-twitter"></i></a></li>

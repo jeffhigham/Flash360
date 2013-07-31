@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
 
-  http_basic_authenticate_with name: ADMIN_CONFIG['username'], password: ADMIN_CONFIG['password'];
+  before_filter :authorize, only: [:index, :show, :destroy]
+  #http_basic_authenticate_with name: ADMIN_CONFIG['username'], password: ADMIN_CONFIG['password'];
 
 	def index
 	  @contacts = Contact.all
@@ -39,12 +40,10 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        #format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
-        #format.json { render json: @contact, status: :created, location: @contact }
+        p_status = Prowler.notify "New Email: #{@contact.name} (#{@contact.email})", 
+          "Subject:#{@contact.subject}\n #{contact_url(@contact)}"
         format.js
       else
-        #format.html { render action: "new" }
-        #format.json { render json: @contact.errors, status: :unprocessable_entity }
         format.js
       end
     end

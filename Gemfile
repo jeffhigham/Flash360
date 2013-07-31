@@ -23,6 +23,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'prowler', '~> 1.2'
+gem 'delayed_job_active_record'
 
 # debugging
 group :development do
@@ -32,7 +34,7 @@ group :development do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
