@@ -34,3 +34,7 @@
     border-radius: 8px;
     overflow: hidden;
 }
+
+.logo {
+    width: 150px;
+}

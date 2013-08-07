@@ -13,7 +13,8 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Flash360 Consulting, LLC" %></title>
+  	<title>Flash360 Consulting, LLC - <%= content_for?(:title) ? yield(:title) : " Website Development, Cloud Computing, Systems Engineering" %></title>
+    <meta name="description=" content="Flash360 Consulting - Website development in PHP, Ruby on Rails, HTML5, JQuery, CSS, and more. Cloud Computing using Amazon Web Services (AWS), Linode, RackSpace, and Heroku. Server Administration expertise in Linux, Solaris, VMWare, webservers, and database servers. ">
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -27,8 +28,9 @@
       <!-- Title Area -->
       <li class="name">
         <h1>
-          <a href="<%= home_index_path %>">
-            <h1><span style="color:#3e94d1; font-family:'Myriad Pro','Helvetica Neue',Helvetica,Arial,Sans-Serif; ">FLASH</span><span style="color:#fff">360</span></h1>
+          <a href="<%= home_index_path %>"><!--
+            <h1><span style="color:#3e94d1; font-family:'Myriad Pro','Helvetica Neue',Helvetica,Arial,Sans-Serif; ">FLASH</span><span style="color:#fff">360</span></h1> -->
+            <img class="logo" alt="Flash360 Logo" src="/f360-logo.png" />
           </a>
         </h1>
       </li>
@@ -69,5 +71,6 @@
   <%= render :partial => "contacts/form" %>
   </div>
   <%= javascript_include_tag "application" %>
+  <%= render :partial => "google/analytics" %>
   </body>
 </html>

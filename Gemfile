@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'prowler', '~> 1.2'
 gem 'delayed_job_active_record'
+gem 'strong_parameters'
 
 # debugging
 group :development do

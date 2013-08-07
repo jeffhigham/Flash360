@@ -1,0 +1,33 @@
+.orbit-bullets {
+    visibility: hidden;
+    display: none;
+}
+
+.orbit-container .orbit-slide-number {
+	visibility: hidden;
+    display: none;
+}
+
+.orbit-container .orbit-prev,
+.orbit-container .orbit-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  background-color: transparent;
+  /*background-color: rgba(0, 0, 0, 0.6); */
+  width: 50px;
+  height: 60px;
+  line-height: 50px;
+  color: white;
+  text-indent: -9999px !important;
+  z-index: 10;
+}
+
+.top-bar {
+  height: 45px;
+  line-height: 45px;
+}
+
+.top-bar-section ul li > a {
+  font-family: "Myriad Pro";
+}

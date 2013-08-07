@@ -1,7 +1,5 @@
 class ContactsController < ApplicationController
-
   before_filter :authorize, only: [:index, :show, :destroy]
-  #http_basic_authenticate_with name: ADMIN_CONFIG['username'], password: ADMIN_CONFIG['password'];
 
 	def index
 	  @contacts = Contact.all

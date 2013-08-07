@@ -1,12 +1,15 @@
 class ResumeController < ApplicationController
 
-	#resume_auth = Resume.first()
-	#http_basic_authenticate_with name: resume_auth[:username], password: resume_auth[:password];
 	def index
-		redirect_to new_resume_path unless session[:resume_allowed] = true
-		prowler = Prowler.new(:delayed => true)
-		p_status = Prowler.notify "Resume View", 
-          "#{request.remote_ip}, #{request.headers['user-agent']}"
+		if !session[:resume_viewed] && !on_home_network?  
+			prowler = Prowler.new(:delayed => true)
+			p_status = Prowler.notify "Resume View", 
+        		"#{request.remote_ip}, #{request.headers['user-agent']}"
+      	session[:resume_viewed] = true
+      	logger.info "Sending Push Notification: Resume View - #{request.remote_ip}, #{request.headers['user-agent']}"
+     else
+      	logger.info "Resume viewed suppressed, multiple views or on home network - #{request.remote_ip}, #{request.headers['user-agent']}"
+     end
 	end
 
 	def new
@@ -27,4 +30,15 @@ class ResumeController < ApplicationController
 		redirect_to root_url
 	end
 	
+	private
+
+	def on_home_network?
+			if request.remote_ip =~ /10\.10\.100/ ||
+				 request.remote_ip == '127.0.0.1'
+				return true
+			else
+				return false
+			end
+	end
+
 end
