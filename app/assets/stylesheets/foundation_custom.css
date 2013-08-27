@@ -24,10 +24,24 @@
 }
 
 .top-bar {
-  height: 45px;
-  line-height: 45px;
+  height: 55px;
+  line-height: 55px;
+  background: #222;
+  border-bottom: 4px solid #666;
 }
 
+.top-bar-section ul {
+  margin-top: 5px;
+}
 .top-bar-section ul li > a {
   font-family: "Myriad Pro";
+  background-color: #222;
+}
+
+.top-bar-section > ul > .divider {
+  height: 40px;
+}
+
+.top-bar-section li a:not(.button) {
+  background: #222; 
 }

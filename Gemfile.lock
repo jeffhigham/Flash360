@@ -37,6 +37,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
     callsite (0.0.11)
+    chunky_png (1.2.8)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -45,6 +46,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (2.0.alpha.0)
+      compass (>= 0.12.2, < 0.14)
     debug_inspector (0.0.2)
     delayed_job (4.0.0)
       activesupport (>= 3.0, < 4.1)
@@ -57,6 +64,7 @@ GEM
     foundation-icons-sass-rails (2.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
+    fssm (0.2.10)
     hike (1.2.3)
     i18n (0.6.4)
     journey (1.0.4)
@@ -137,6 +145,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  compass-rails
   delayed_job_active_record
   foundation-icons-sass-rails (~> 2.0.0)
   jquery-rails

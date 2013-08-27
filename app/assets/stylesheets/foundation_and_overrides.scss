@@ -1340,4 +1340,13 @@ $primary-color: #3e94d1;
   "foundation/components/tooltips",
   "foundation/components/dropdown";
 
+// http://compass-style.org/examples/compass/layout/sticky-footer/
+// https://github.com/Compass/compass-rails
+
+//@import "compass/reset.scss";
+
+@import "compass/layout.scss";
+ 
+@include sticky-footer(100px, "#layout", "#layout_footer", "#footer");
+
 @import 'foundation-icons';

@@ -21,15 +21,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
+<!-- layout -->
+<div id="layout">
 <!-- Navigation -->
   <nav class="top-bar">
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
         <h1>
-          <a href="<%= home_index_path %>"><!--
-            <h1><span style="color:#3e94d1; font-family:'Myriad Pro','Helvetica Neue',Helvetica,Arial,Sans-Serif; ">FLASH</span><span style="color:#fff">360</span></h1> -->
+          <a href="<%= home_index_path %>">
             <img class="logo" alt="Flash360 Logo" src="/f360-logo.png" />
           </a>
         </h1>
@@ -62,7 +62,11 @@
 
   <%= yield %>
 
-  <!-- Footer -->
+  <!-- sticky footer -->
+  <div id="layout_footer"></div>
+  <!-- /sticky footer -->
+
+  </div> <!-- /layout -->
 
   <%= render :template => "footer/show" %>
   
